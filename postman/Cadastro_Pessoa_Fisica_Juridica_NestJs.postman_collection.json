@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "54e6bc6e-7b0c-44ee-816d-50e9d60cb3e3",
+		"name": "Cadastro_Pessoa_Fisica_Juridica_NestJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoa_Fisica_Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Fulano\",\n    \"cpf\": \"87432411077\",\n    \"sexo\": \"M\",\n    \"dataNascimento\": \"2000-01-02\",\n    \"email\": \"teste@teste.com.br\",\n    \"telefone\": \"11 1234-4323\",\n    \"celular\": \"11 12345-1234\",\n    \"foto\": \"\",\n    \"enderecos\": [\n        {\n            \"endereco\": \"Rua do Norte\",\n            \"numero\": \"122\",\n            \"complemento\": \"casa\",\n            \"bairro\": \"Bairro do Norte\",\n            \"cidade\": \"Norte\",\n            \"estado\": \"SP\",\n            \"cep\": \"02111-010\"\n        },\n        {\n            \"endereco\": \"Rua Sul\",\n            \"numero\": \"122\",\n            \"complemento\": \"apartamento\",\n            \"bairro\": \"Bairro do Sul\",\n            \"cidade\": \"Sul\",\n            \"estado\": \"SP\",\n            \"cep\": \"02222-010\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoafisica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoafisica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Fisica_FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoafisica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoafisica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Fisica_FindOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoafisica/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoafisica",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Fisica_Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Fulano\",\n    \"cpf\": \"87432411077\",\n    \"sexo\": \"M\",\n    \"dataNascimento\": \"2000-01-02\",\n    \"email\": \"teste@teste.com.br\",\n    \"telefone\": \"11 1234-4323\",\n    \"celular\": \"11 12345-1234\",\n    \"foto\": \"\",\n    \"enderecos\": [\n        {\n            \"endereco\": \"Rua do Norte\",\n            \"numero\": \"122\",\n            \"complemento\": \"casa\",\n            \"bairro\": \"Bairro do Norte\",\n            \"cidade\": \"Norte\",\n            \"estado\": \"SP\",\n            \"cep\": \"02111-010\"\n        },\n        {\n            \"endereco\": \"Rua Sul\",\n            \"numero\": \"122\",\n            \"complemento\": \"apartamento\",\n            \"bairro\": \"Bairro do Sul\",\n            \"cidade\": \"Sul\",\n            \"estado\": \"SP\",\n            \"cep\": \"02222-010\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoafisica/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoafisica",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Fisica_Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoafisica/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoafisica",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Juridica_Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"razaoSocial\": \"Company Test\",\n    \"cpf\": \"39256003000126\",\n    \"cnpj\": \"M\",\n    \"email\": \"teste@empresa.com.br\",\n    \"telefone\": \"11 1234-4323\",\n    \"celular\": \"11 12345-1234\",\n    \"foto\": \"\",\n    \"enderecos\": [\n        {\n            \"endereco\": \"Rua Company\",\n            \"numero\": \"122\",\n            \"complemento\": \"Cobrança\",\n            \"bairro\": \"Empresarial\",\n            \"cidade\": \"Sao Paulo\",\n            \"estado\": \"SP\",\n            \"cep\": \"02000-010\"\n        },\n        {\n            \"endereco\": \"Rua Company 2\",\n            \"numero\": \"100\",\n            \"complemento\": \"Entrega\",\n            \"bairro\": \"Empresarial\",\n            \"cidade\": \"Sao Paulo\",\n            \"estado\": \"SP\",\n            \"cep\": \"02222-010\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoajuridica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoajuridica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Juridica_FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoajuridica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoajuridica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Juridica_Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 1,\n        \"razaoSocial\": \"Company\",\n        \"cnpj\": \"M\",\n        \"email\": \"teste@empresa.com.br\",\n        \"telefone\": \"11 1234-4323\",\n        \"celular\": \"11 12345-1234\",\n        \"foto\": \"\",\n        \"enderecos\": [\n            {\n                \"id\": 1,\n                \"endereco\": \"Rua Empresa\",\n                \"numero\": \"122\",\n                \"complemento\": \"casa\",\n                \"bairro\": \"Bairro Xpto\",\n                \"cidade\": \"Cidade Xpto\",\n                \"estado\": \"SP\",\n                \"cep\": \"02111-010\"\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"razaoSocial\": \"Company Test\",\n        \"cnpj\": \"M\",\n        \"email\": \"teste@empresa.com.br\",\n        \"telefone\": \"11 1234-4323\",\n        \"celular\": \"11 12345-1234\",\n        \"foto\": \"\",\n        \"enderecos\": [\n            {\n                \"id\": 3,\n                \"endereco\": \"Rua Company\",\n                \"numero\": \"122\",\n                \"complemento\": \"Cobrança\",\n                \"bairro\": \"Empresarial\",\n                \"cidade\": \"Sao Paulo\",\n                \"estado\": \"SP\",\n                \"cep\": \"02000-010\"\n            },\n            {\n                \"id\": 4,\n                \"endereco\": \"Rua Company 2\",\n                \"numero\": \"100\",\n                \"complemento\": \"Entrega\",\n                \"bairro\": \"Empresarial\",\n                \"cidade\": \"Sao Paulo\",\n                \"estado\": \"SP\",\n                \"cep\": \"02222-010\"\n            }\n        ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoajuridica/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoajuridica",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Juridica_FindOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoajuridica/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoajuridica",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa_Juridica_Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoajuridica/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoajuridica",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
