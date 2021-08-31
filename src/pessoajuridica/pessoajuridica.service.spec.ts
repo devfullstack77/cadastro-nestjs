@@ -9,31 +9,31 @@ describe('Pessoa Juridica Service', () => {
   let idNew = 0
   let service: PessoaJuridicaService
   let add: CreatePessoaJuridicaDto = new CreatePessoaJuridicaDto()
-  add.razaoSocial = "Company Test"
-  add.cnpj = "87756702000188"
-  add.email = "teste@empresa.com.br"
-  add.telefone = "11 1234-4323"
-  add.celular = "11 12345-1234"
-  add.foto = ""
+  add.razaoSocial = 'Company Test'
+  add.cnpj = '87756702000188'
+  add.email = 'teste@empresa.com.br'
+  add.telefone = '11 1234-4323'
+  add.celular = '11 12345-1234'
+  add.foto = ''
 
   beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         TypeOrmModule.forRoot({
-          "name": "default",
-          "type": ormconfig.type,
-          "host": ormconfig.host,
-          "port": ormconfig.port,
-          "username": ormconfig.username,
-          "password": ormconfig.password,
-          "database": ormconfig.database,
-          "autoLoadEntities": ormconfig.autoLoadEntities,
-          "entities": ["src/**/*.entity{.ts,.js}"],
-          "synchronize": ormconfig.synchronize,
+          name: 'default',
+          type: ormconfig.type,
+          host: ormconfig.host,
+          port: ormconfig.port,
+          username: ormconfig.username,
+          password: ormconfig.password,
+          database: ormconfig.database,
+          autoLoadEntities: ormconfig.autoLoadEntities,
+          entities: ['src/**/*.entity{.ts,.js}'],
+          synchronize: ormconfig.synchronize,
         }),
-        TypeOrmModule.forFeature([PessoaJuridica])
+        TypeOrmModule.forFeature([PessoaJuridica]),
       ],
-      providers: [PessoaJuridicaService]
+      providers: [PessoaJuridicaService],
     }).compile()
 
     service = module.get<PessoaJuridicaService>(PessoaJuridicaService)
@@ -50,10 +50,8 @@ describe('Pessoa Juridica Service', () => {
   describe('findAll', () => {
     it('obter todos os registros de pessoa juridica', async () => {
       const info = await service.findAll()
-      if (info)
-        expect(info.length).toBeGreaterThan(1)
-      else
-        expect(info.length).toBeGreaterThan(0)
+      if (info) expect(info.length).toBeGreaterThan(1)
+      else expect(info.length).toBeGreaterThan(0)
     })
   })
 
@@ -66,7 +64,7 @@ describe('Pessoa Juridica Service', () => {
 
   describe('update', () => {
     it('alterar razão social ', async () => {
-      add.razaoSocial = "Company Test Update"
+      add.razaoSocial = 'Company Test Update'
       const info = await service.update(idNew, add)
       expect(info.affected).toBe(1)
     })
@@ -80,6 +78,4 @@ describe('Pessoa Juridica Service', () => {
   //     // expect(info.id).toBe(idNew)
   //   })
   // })
-
-
 })

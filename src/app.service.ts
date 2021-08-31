@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Cadastro simples de Pessoa Fisica/Juridica!';
+    return 'Cadastro simples de Pessoa Fisica/Juridica!'
   }
 }
